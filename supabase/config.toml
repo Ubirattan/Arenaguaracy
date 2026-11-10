@@ -1,0 +1,15 @@
+# Configuração para o Supabase CLI (desenvolvimento local / deploy).
+project_id = "arena-guaracy"
+
+[auth]
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/redefinir-senha"]
+# Cadastro público DESATIVADO: contas são criadas apenas pelo administrador.
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+enable_confirmations = true
+
+[functions.admin-users]
+verify_jwt = true
